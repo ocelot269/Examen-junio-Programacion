@@ -3,18 +3,25 @@ package org.lasencinas.fastbreaktruck.abstrack;
 
 import org.lasencinas.fasbreaktruck.interfaces.Item;
 import org.lasencinas.fasbreaktruck.interfaces.Packing;
+import org.lasencinas.fastbreaktruck.model.Caja;
 
 
 public abstract class Cereales implements Item{
+    
+    
+    Item caja = (Item) new Caja();
 
-    @Override
-    public Packing empaquetado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Item getCaja() {
+        return caja;
     }
 
+    public void setCaja(Item caja) {
+        this.caja = caja;
+    }
+    
     @Override
-    public String toString() {
-        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+    public Packing empaquetado() {
+        return getCaja().empaquetado();
     }
     
 }

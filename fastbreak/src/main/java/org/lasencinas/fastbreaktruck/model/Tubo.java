@@ -5,7 +5,7 @@ import org.lasencinas.fasbreaktruck.interfaces.Packing;
 
 
 public class Tubo implements Packing{
-   String nombre = "tubo";
+   String nombre;
     
     public Tubo() {
         setNombre("tubo");

@@ -1,13 +1,12 @@
-
 package org.lasencinas.fastbreaktruck.model;
 
 import org.lasencinas.fastbreaktruck.abstrack.Cereales;
 
+public class Eyeholes extends Cereales {
 
-public class Eyeholes extends Cereales{
-    
-    String nombre ;
-    double pvp ;
+    String nombre;
+    double pvp;
+
     public Eyeholes() {
         setNombre("Eyeholes");
         setPvp(25.0);
@@ -38,5 +37,10 @@ public class Eyeholes extends Cereales{
     public double pvp() {
         return getPvp();
     }
-   
+
+    @Override
+    public String toString() {
+        return "Item : " + getNombre() + " empaquetado : " + getCaja().empaquetado() + " Precio : " + getPvp();
+    }
+
 }

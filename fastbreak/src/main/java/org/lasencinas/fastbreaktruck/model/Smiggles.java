@@ -1,8 +1,12 @@
 
 package org.lasencinas.fastbreaktruck.model;
 
+import org.lasencinas.fasbreaktruck.interfaces.Item;
+import org.lasencinas.fastbreaktruck.abstrack.Cereales;
 
-public class Smiggles {
+
+public class Smiggles extends Cereales{
+   
     String nombre ="Smiggles";
     double pvp = 50.0;
 
@@ -24,6 +28,22 @@ public class Smiggles {
     public void setPvp(double pvp) {
         this.pvp = pvp;
     }
+
+    @Override
+    public String toString() {
+        return "Item : " + getNombre() + " empaquetado : " + getCaja().empaquetado() + " Precio : " + getPvp();
+    }
+
+    @Override
+    public String nombre() {
+        return getNombre();
+    }
+
+    @Override
+    public double pvp() {
+        return getPvp();
+    }
+    
     
     
 }

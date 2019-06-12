@@ -38,5 +38,10 @@ public class FleebJuice extends Bebida{
     public double pvp() {
       return getPvp();
     }
+
+    @Override
+    public String toString() {
+        return "Item : " + getNombre() + " empaquetado : " + getTubo().empaquetado() + " Precio : " + getPvp();
+    }
     
 }
